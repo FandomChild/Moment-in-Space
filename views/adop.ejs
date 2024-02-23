@@ -1,0 +1,26 @@
+<%- include("partials/header.ejs") %>
+
+<section class="home py-5">
+    <div class="container col-xxl-8 px-4 py-5">
+        <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+          <% if (locals.log) { %>
+            <div class="col-10 col-sm-8 col-lg-6">
+              <img src=<%= log.url %>  class="d-block mx-lg-auto img-fluid" alt=<%= log.title %> width="700" height="500" loading="lazy">
+            </div>
+            <div class="col-lg-6">
+              <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3"><%= log.title %></h1>
+              <p class="lead"><%= log.explanation %> </p>
+          <% } %>
+              <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                <form action="/adop" method="POST">
+                  <label for="name">Date:</label>
+                  <input type="text" name="date">
+                 <button type="submit" class="btn btn-outline-secondary btn-lg px-4 text-bg-primary">Default</button>
+                </form>
+              </div>
+            </div>
+        </div>
+      </div>
+</section>
+
+<%- include("partials/footer.ejs") %>
