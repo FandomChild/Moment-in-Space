@@ -1,3 +1,10 @@
-body {
-    background-color: blue;
+
+
+.home {
+    background-color: aliceblue;
+}
+
+header {
+    display: flex;
+    gap: 20px;
 }
