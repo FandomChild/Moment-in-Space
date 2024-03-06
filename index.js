@@ -2,14 +2,20 @@ import express from "express";
 import axios from "axios";
 import bodyParser from "body-parser";
 
-// set consts and variables for error catches, including current date for max date input on ejs pages
+// set consts and needed variables
 const app = express();
 const port = 3000;
 const URL = "https://api.nasa.gov/planetary/apod"
 const apiKey = "ryIfDBX9yydJB2rZTTXcALzDNebsTGHIh64kG6Q6";
-var present = Date().slice(0, 10);
-console.log(present);
 var copyright;
+
+// set the current date to pass as max input on date form in ejs, make sure it's actually local time and not UTC
+var current = new Date();
+var year = current.getFullYear();
+var month = ('0' + (current.getMonth() + 1)).slice(-2);
+var day = ('0' + current.getDate()).slice(-2);
+var present = year+'-'+month+'-'+day;
+console.log(present)
 
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({ extended: true }));
