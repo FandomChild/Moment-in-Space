@@ -2,7 +2,7 @@
 <!-- copyright issue page -->
 <section class="home py-5">
     <div class="container col-xxl-8 px-4 py-5">
-        <div class="row flex-lg-row-reverse g-5 py-5 top">
+        <div class="row flex-lg-row-reverse g-5 py-5 ms-0 top">
           <% if (locals.mssg && locals.copyDate && locals.max) { %>
               <div class="col-10 col-sm-8 col-lg-6">
                 <img src="/static/copyright-cat.jpg"  class="d-block mx-lg-auto img-fluid" alt="copyright cat" loading="lazy">
@@ -11,7 +11,7 @@
                 <h1 class="mb-3">Copyright Cat</h1>
                 <p class="lead">Unfortunately, the image for <%= copyDate %> is copyrighted and not owned by NASA. Please pick a different date, thank you.</p>
                 <hr>
-                <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                <div class="d-grid gap-2 d-md-flex justify-content-center">
                   <form action="/post" method="POST">
                     <label for="name"><strong>Date:</strong></label>
                     <input type="date" name="date" min="1995-06-16" max=<%= max %>>

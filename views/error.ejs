@@ -2,7 +2,7 @@
 <!-- blank date error page -->
 <section class="home py-5">
     <div class="container col-xxl-8 px-4 py-5">
-        <div class="row flex-lg-row-reverse g-5 py-5 top">
+        <div class="row flex-lg-row-reverse g-5 py-5 ms-0 top">
             <div class="col-10 col-sm-8 col-lg-6">
                 <img src="/static/judgment-cat.jpg"  class="d-block mx-lg-auto img-fluid" alt="judgment cat" width="700" height="500" loading="lazy">
             </div>
@@ -11,7 +11,7 @@
                 <p class="lead">The date was left blank. Please pick a valid date within the parameters, thank you.</p>
                 <hr>
                 <% if (locals.max) {%>
-                    <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                    <div class="d-grid gap-2 d-md-flex justify-content-center">
                         <form action="/post" method="POST">
                             <label for="name"><strong>Date:</strong></label>
                             <input type="date" name="date" min="1995-06-16" max=<%= max %>>

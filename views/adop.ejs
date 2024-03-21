@@ -2,7 +2,7 @@
 <!-- no issues page -->
 <section class="home py-5">
     <div class="container col-xxl-8 px-4 py-5">
-        <div class="row flex-lg-row-reverse g-5 py-5 top">
+        <div class="row flex-lg-row-reverse g-5 py-5 ms-0 top">
           <% if (locals.log && locals.max) { %>
             <div class="col-10 col-sm-8 col-lg-6">
               <img src=<%= log.url %>  class="d-block mx-lg-auto img-fluid" alt=<%= log.title %> width="700" height="500" loading="lazy">
@@ -11,7 +11,7 @@
               <h1 class="mb-3"><%= log.title %></h1>
               <p class="lead"><%= log.explanation %> </p>
               <hr>
-              <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+              <div class="d-grid gap-2 d-md-flex justify-content-center">
                 <form action="/post" method="POST">
                   <label for="name"><strong>Date:</strong></label>
                   <input type="date" name="date" min="1995-06-16" max=<%= max %>>

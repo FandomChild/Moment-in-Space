@@ -4,6 +4,8 @@
 
 .top {
     align-items: center;
+    justify-content: center;
+    margin-right: 0px;
 }
 
 a, h1, span {
@@ -12,6 +14,7 @@ a, h1, span {
     font-optical-sizing: auto;
     font-weight: 500;
     font-style: normal;
+    text-align: center;
 }
 
 header, footer {
@@ -51,4 +54,5 @@ p {
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
+    text-align: center;
 }

@@ -1,20 +1,20 @@
 <%- include("partials/header.ejs") %>
 <!-- home page -->
 <section class="home py-5">
-    <div class="container col-xxl-8 py-5">
-        <div class="row flex-lg-row-reverse g-5 py-5 top">
+    <div class="container col-xxl-8 py-5 px-0">
+        <div class="row flex-lg-row-reverse g-5 py-5 ms-0 top">
           <% if (locals.my && locals.max) { %>
             <div class="col-10 col-sm-8 col-lg-6">
               <img src=<%= my.url %> class="d-block mx-lg-auto img-fluid" alt="The Double Dust Disks of HD 95086" width="700" height="500" loading="lazy">
               <p><strong>Title:</strong> <%= my.title %> <strong>Date:</strong> <%= my.date %></p>
             </div>
-            <div class="col-lg-6 par">
+            <div class="col-lg-6">
               <h1 class="mb-3">NASA Picture Of the Day</h1>
               <p class="lead">Enjoy NASA's astronomy pictures of the day, by date. 
                 Pictures are available from June 16th, 1995, all the way up to today's date, if not copyrighted.
               </p>
               <hr>
-              <div class="d-grid d-md-flex justify-content-md-start form">
+              <div class="d-grid gap-2 d-md-flex justify-content-center form">
                   <form action="/post" method="POST">
                     <label for="name"><strong>Date:</strong></label>
                     <input type="date" name="date" min="1995-06-16" max=<%= max %>>
