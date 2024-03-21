@@ -43,6 +43,8 @@ app.get("/", async (req, res) => {
     }
 });
 
+// get actual requests for pictures of the day working and account for errors
+
 app.post("/post", async (req, res) => {
 
     console.log(req.body["date"]);
@@ -95,6 +97,7 @@ app.post("/post", async (req, res) => {
     }
 });
 
+// on local host
 app.listen(port, () => {
     console.log(`Listening on port ${port}`);
   });

@@ -1,10 +1,54 @@
-
-
 .home {
-    background-color: aliceblue;
+    background-color: #DDF2FD;
 }
 
-header {
-    display: flex;
-    gap: 20px;
+.top {
+    align-items: center;
+}
+
+a, h1, span {
+    color: #232D3F;
+    font-family: "Vollkorn", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+
+header, footer {
+    background-color: #427D9D;
+}
+
+hr, input, button{
+    border: solid #232D3F;
+    
+}
+
+a {
+    color: #232D3F;
+    font-size: 2em;
+    font-weight: 700;
+    padding-right: 5;
+}
+
+button {
+    height: 30px;
+    width: 50px;
+    background-color: #427D9D;
+}
+
+img {
+    width: 500; 
+    height: 500;
+}
+
+input {
+    height: 30px;
+}
+
+p {
+    color: #164863;
+    font-family: "Arimo", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
 }

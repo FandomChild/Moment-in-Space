@@ -1,23 +1,24 @@
 <%- include("partials/header.ejs") %>
 <!-- home page -->
 <section class="home py-5">
-    <div class="container col-xxl-8 px-4 py-5">
-        <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+    <div class="container col-xxl-8 py-5">
+        <div class="row flex-lg-row-reverse g-5 py-5 top">
           <% if (locals.my && locals.max) { %>
             <div class="col-10 col-sm-8 col-lg-6">
               <img src=<%= my.url %> class="d-block mx-lg-auto img-fluid" alt="The Double Dust Disks of HD 95086" width="700" height="500" loading="lazy">
-              <p>Title: <%= my.title %> Date: <%= my.date %></p>
+              <p><strong>Title:</strong> <%= my.title %> <strong>Date:</strong> <%= my.date %></p>
             </div>
-            <div class="col-lg-6">
-              <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">NASA Picture Of the Day</h1>
+            <div class="col-lg-6 par">
+              <h1 class="mb-3">NASA Picture Of the Day</h1>
               <p class="lead">Enjoy NASA's astronomy pictures of the day, by date. 
-                Pictures are available from June 16th, 1995, all the way up to today's date.
+                Pictures are available from June 16th, 1995, all the way up to today's date, if not copyrighted.
               </p>
-              <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+              <hr>
+              <div class="d-grid d-md-flex justify-content-md-start form">
                   <form action="/post" method="POST">
-                    <label for="name">Date:</label>
+                    <label for="name"><strong>Date:</strong></label>
                     <input type="date" name="date" min="1995-06-16" max=<%= max %>>
-                    <button type="submit" class="btn btn-outline-secondary btn-lg px-4 text-bg-primary">Default</button>
+                    <button type="submit" class="py-0 px-0">Go</button>
                   </form>
               </div>
             </div>
